@@ -1,5 +1,9 @@
 .top{
     height: 100px;
     width: auto;
-    background-color: lightgray;
+    /* background-color: rgb(114, 255, 182); */
+    background-color : #333333;
+}
+.navbar-brand{
+    font-weight: bold;
 }

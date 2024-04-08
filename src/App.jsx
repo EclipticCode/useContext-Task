@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext, useState } from 'react'
 import Card from './components/Card'
 import img1 from './assets/IPhone_X.png'
 import img2 from './assets/samsung.jpeg'
@@ -6,7 +6,9 @@ import img3 from './assets/Pixel8.png'
 import img4 from './assets/Vivo.jpeg'
 import img5 from './assets/Oneplus9.png'
 import Navbar from './components/Navbar'
+import "./App.css"
 
+export const CountContext = createContext()
 const App = () => {
   const cardDatas = [
     {id: 1 , img : img1 , title : "Iphone X" , description : "An apple phone which is nothing like apple" , price : "$899"  },
@@ -15,8 +17,10 @@ const App = () => {
     {id: 4 , img : img4 , title : "Vivo F9" , description : "Samsung's new variant which goes beyond Galaxy to the Universe" , price : "$449" },
     {id: 5 , img : img5 , title : "One Plus 9" , description : "The all new One plus 9 with fast charging" , price : "$449" }
   ]
+  const [count , setCount] = useState(0)
   return (
-    <div>
+    <div className='body'>
+      <CountContext.Provider value={count}>
       <Navbar/>
         <div className="container">
           <div className="row">
@@ -29,6 +33,7 @@ const App = () => {
           ))}
           </div>
         </div>
+      </CountContext.Provider>
     </div>
   )
 }

@@ -1,12 +1,13 @@
-import React from 'react'
+import React , {useContext} from 'react'
 import "./Navbar.css"
-
+import { CountContext } from '../App'
 const Navbar = () => {
+    const count = useContext(CountContext)
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">Shopping Cart</a>
+  <div className="container-fluid body">
+    <a className="navbar-brand" href="#">CartEase</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -21,7 +22,7 @@ const Navbar = () => {
         </li>
         </ul>
       <form className="d-flex" role="search">
-      <button className="btn btn-outline-secondary" type="submit">Total Quantity : </button> 
+      <button className="btn btn-outline-secondary" type="submit">Total Quantity : {count} </button> 
       &nbsp;&nbsp;&nbsp;&nbsp;
         <button className="btn btn-outline-secondary" type="submit">Total Amount : </button>
       </form>
