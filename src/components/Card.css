@@ -1,0 +1,11 @@
+.plusButton{
+    margin-left: 180px;
+}
+.container{
+    margin:20px;
+    align-items: center;
+    justify-content: center;
+}
+.card-body{
+    background-color: #f0eeeb;
+}
