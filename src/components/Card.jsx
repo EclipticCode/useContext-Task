@@ -14,9 +14,9 @@ const Card = ({img , title , description ,price}) => {
                      <h5 className="card-title">{title}</h5>
                      <p className="card-text">{description}</p>
                   <div>
-                     <button type="button" className="btn btn-secondary justify-content-start">-</button> 
+                     <button type="button" className="btn btn-outline-secondary justify-content-start">-</button> 
                      <span>
-                     <button type="button" className="btn btn-secondary justify-content-end plusButton">+</button>
+                     <button type="button" className="btn btn-outline-secondary justify-content-end plusButton">+</button>
                      </span>
                      </div>
  

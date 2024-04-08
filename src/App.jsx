@@ -5,6 +5,8 @@ import img2 from './assets/samsung.jpeg'
 import img3 from './assets/Pixel8.png'
 import img4 from './assets/Vivo.jpeg'
 import img5 from './assets/Oneplus9.png'
+import Navbar from './components/Navbar'
+
 const App = () => {
   const cardDatas = [
     {id: 1 , img : img1 , title : "Iphone X" , description : "An apple phone which is nothing like apple" , price : "$899"  },
@@ -15,6 +17,7 @@ const App = () => {
   ]
   return (
     <div>
+      <Navbar/>
         <div className="container">
           <div className="row">
           {cardDatas.map(data => (
