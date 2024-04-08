@@ -1,9 +1,13 @@
 .top{
     height: 100px;
     width: auto;
-    /* background-color: rgb(114, 255, 182); */
-    background-color : #333333;
 }
 .navbar-brand{
-    font-weight: bold;
+    font-style: oblique;
+    background: linear-gradient(rgb(9, 86, 201),rgba(2, 2, 100, 0.326));
+    border-style: double;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    color: white;
 }

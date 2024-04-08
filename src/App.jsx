@@ -15,7 +15,7 @@ const App = () => {
     {id: 2 , img : img2 , title : "Samsung Galaxy" , description : "Samsung's new variant which goes beyond Galaxy to the Universe" , price : "$649"  },
     {id: 3 , img : img3 , title : "Google Pixel 8" , description : "Google's new launch with all AI features included" , price : "$799"  },
     {id: 4 , img : img4 , title : "Vivo F9" , description : "Samsung's new variant which goes beyond Galaxy to the Universe" , price : "$449" },
-    {id: 5 , img : img5 , title : "One Plus 9" , description : "The all new One plus 9 with fast charging" , price : "$449" }
+    {id: 5 , img : img5 , title : "One Plus 9" , description : "The all new One plus 9 with fast charging" , price : "$699" }
   ]
   const [count , setCount] = useState(0)
   return (

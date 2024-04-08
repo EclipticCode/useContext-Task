@@ -18,9 +18,9 @@ const Card = ({img , title , description ,price}) => {
                     <br />
                   <div className='buttons'>
                   <div className="btn-group" role="group" aria-label="Basic outlined example">
-                     <button type="button" className="btn btn-outline-secondary">-</button>
-                      <button type="button" className="btn btn-outline-secondary">Buy Now</button>
-                      <button type="button" className="btn btn-outline-secondary">+</button>
+                     <button type="button" className="btn btn-outline-dark">-</button>
+                      <button type="button" className="btn btn-outline-dark">Buy Now</button>
+                      <button type="button" className="btn btn-outline-dark">+</button>
                    </div>
                   </div>
                     </div>
