@@ -7,8 +7,9 @@ import img4 from './assets/Vivo.jpeg'
 import img5 from './assets/Oneplus9.png'
 import Navbar from './components/Navbar'
 import "./App.css"
+import { CounterProvider } from './components/Context'
 
-export const CountContext = createContext()
+
 const App = () => {
   const cardDatas = [
     {id: 1 , img : img1 , title : "Iphone X" , description : "An apple phone which is nothing like apple" , price : "$899"  },
@@ -17,24 +18,25 @@ const App = () => {
     {id: 4 , img : img4 , title : "Vivo F9" , description : "Samsung's new variant which goes beyond Galaxy to the Universe" , price : "$449" },
     {id: 5 , img : img5 , title : "One Plus 9" , description : "The all new One plus 9 with fast charging" , price : "$699" }
   ]
-  const [count , setCount] = useState(0)
+  
   return (
-    <div className='body'>
-      <CountContext.Provider value={count}>
-      <Navbar/>
-        <div className="container">
-          <div className="row">
-          {cardDatas.map(data => (
-            <div className='col-sm-12 col-md-6 col-lg-4 col-xl-4 justify-content-center margin' key={data.id}>
-              <Card
-              {...data}
-              />
-            </div>
-          ))}
-          </div>
-        </div>
-      </CountContext.Provider>
-    </div>
+
+      <CounterProvider>
+           <div className='body'>
+     <Navbar/>
+       <div className="container">
+         <div className="row">
+         {cardDatas.map(data => (
+           <div className='col-sm-12 col-md-6 col-lg-4 col-xl-4 justify-content-center margin' key={data.id}>
+             <Card
+             {...data}
+             />
+           </div>
+         ))}
+         </div>
+       </div>
+     </div>
+      </CounterProvider>
   )
 }
 

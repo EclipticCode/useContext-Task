@@ -1,8 +1,11 @@
 import React , {useContext} from 'react'
 import "./Card.css"
-import { CountContext } from '../App'
+import { CounterContext } from '../components/Context.jsx'
 
 const Card = ({img , title , description ,price}) => {
+  
+  const { increment , decrement } = useContext(CounterContext)
+  
   return (
     <div>
         <div className="container">
@@ -17,18 +20,18 @@ const Card = ({img , title , description ,price}) => {
                     <br />
                     <br />
                   <div className='buttons'>
-                  <div className="btn-group" role="group" aria-label="Basic outlined example">
-                     <button type="button" className="btn btn-outline-dark">-</button>
-                      <button type="button" className="btn btn-outline-dark">Buy Now</button>
-                      <button type="button" className="btn btn-outline-dark">+</button>
+                   <div className="btn-group" role="group" aria-label="Basic outlined example">
+                      <button type="button" className="btn btn-outline-dark" onClick={decrement}>-</button>
+                      <button className="btn btn-outline-dark">Buy Now</button>
+                      <button type="button" className="btn btn-outline-dark" onClick={increment}>+</button>
                    </div>
                   </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
+                 </div>
+               </div>
+             </div>
+          </div>
         </div>
-    </div>
+     </div>
   )
 }
 
