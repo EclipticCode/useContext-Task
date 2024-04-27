@@ -6,10 +6,10 @@ const Card = () => {
   const { increment, decrement, cardDatas } = useContext(CounterContext);
 
   return (
-    <div className="container">
+    <div className="container align-items-center">
       <div className="row">
         {cardDatas.map(data => (
-          <div className="col-sm-12 col-md-4 col-lg-4 justify-content-center margin" key={data.id}>
+          <div className="col-sm-12 col-md-6 col-lg-4 justify-content-center margin " key={data.id}>
             <div className="card align-items-center" style={{ width: "18rem" }}>
               <img src={data.img} className="card-img-top img-fluid" style={{ width: "80%", height: "200px" }} alt=".." />
               <div className="card-body">
