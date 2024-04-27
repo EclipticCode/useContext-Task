@@ -7,7 +7,7 @@
     justify-content: center;
 }
 .card-body{
-    background-color: #e5f6f0;
+    background-color: #a4e8d0;
 }
 .buttons{
     text-align: center;
@@ -20,4 +20,10 @@
 .card{
     border: 2px solid rgb(158, 158, 158);
     box-shadow: 0 4px 8px rgba(27, 14, 14, 0.444);
+}
+.margin{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 60px;
 }

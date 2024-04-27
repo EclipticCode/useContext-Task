@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { CounterContext } from "../components/Context.jsx";
 
 const Navbar = () => {
-  const { count } = useContext(CounterContext);
+  const { count , totalAmount} = useContext(CounterContext);
 
   return (
     <div className="body">
@@ -38,11 +38,11 @@ const Navbar = () => {
             </ul>
             <form className="d-flex" role="search">
               <button className="btn btn-outline-secondary" type="submit">
-                Total Quantity : {count}{" "}
+                Total Quantity : {count}
               </button>
               &nbsp;&nbsp;&nbsp;&nbsp;
               <button className="btn btn-outline-secondary" type="submit">
-                Total Amount :{" "}
+                Total Amount : $ {totalAmount}
               </button>
             </form>
           </div>
